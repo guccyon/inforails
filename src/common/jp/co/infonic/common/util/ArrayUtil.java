@@ -19,7 +19,7 @@ public class ArrayUtil {
 	public static String join(Object[] strAry, String delimiter) {
 		return new ExArray<Object>(strAry).join(delimiter);
 	}
-	public static String join(List strList, String delimiter) {
+	public static String join(List<?> strList, String delimiter) {
 	    return join(strList.toArray(new Object[0]), delimiter);
 	}
 	

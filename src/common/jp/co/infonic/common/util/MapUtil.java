@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class MapUtil {
 
-	public static Object convertObject(Class klazz, Map<String, Object> map) {
+	public static <T> T convertObject(Class<T> klazz, Map<String, Object> map) {
 		try {
-			Object obj = klazz.newInstance();
+			T obj = klazz.newInstance();
 			injectValue(obj, map);
 			return obj;
 		} catch (Exception e) {
@@ -27,7 +27,7 @@ public class MapUtil {
 			} else {
 				Object child =f.getType().newInstance(); 
 				f.set(target, child);
-				injectValue(child, (Map) value);
+				injectValue(child, (Map<String, Object>) value);
 			}
 		}
 	}

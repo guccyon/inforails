@@ -1,7 +1,5 @@
 package jp.co.infonic.common.module.ex;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;

@@ -12,11 +12,11 @@ public class ConditionSupport {
 		return !isBlank(value);
 	}
 	
-	public static boolean isBlank(Collection obj) {
+	public static boolean isBlank(Collection<?> obj) {
 		return obj == null || obj.size() == 0;
 	}
 	
-	public static boolean isExist(Collection obj) {
+	public static boolean isExist(Collection<?> obj) {
 		return ! isBlank(obj);
 	}
 	
